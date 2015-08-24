@@ -22,7 +22,19 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "file?name=[name].[ext]",
-      }
+      },
+      // SASS
+      {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
+      },
+
+      //Hotloader
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ["react-hot", "babel-loader"],
+      },
     ],
   }
 
