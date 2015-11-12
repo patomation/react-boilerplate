@@ -29,6 +29,9 @@ module.exports = {
         loader: 'style!css!sass'
       },
 
+      //Image Loader
+      { test: /\.jpe?g$|\.gif$|\.png$/i, loader: "file-loader" },
+
       //Hotloader
       {
         test: /\.js$/,

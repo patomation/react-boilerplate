@@ -7,6 +7,7 @@ import './main.scss'
 
 //Components
 import Layout from './components/layout'
+import image from '../images/CHAT2.gif'
 
 var App = React.createClass({
   render: function() {
@@ -14,6 +15,8 @@ var App = React.createClass({
       <div className='app'>
         <Layout>
           Hello World
+          <br/>
+          <img src={image} />
         </Layout>
       </div>
     )
