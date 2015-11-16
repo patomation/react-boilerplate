@@ -1,3 +1,11 @@
+var svgoConfig = JSON.stringify({
+  plugins: [
+    {removeTitle: true},
+    {convertColors: {shorthex: false}},
+    {convertPathData: false}
+  ]
+});
+
 module.exports = {
   context: __dirname + "/app",
   entry: {
@@ -31,6 +39,15 @@ module.exports = {
 
       //Image Loader
       { test: /\.jpe?g$|\.gif$|\.png$/i, loader: "file-loader" },
+
+      //SVG Loader
+      {
+        test: /.*\.svg$/,
+        loaders: [
+          'file-loader',
+          'svgo-loader?' + svgoConfig
+        ]
+      },
 
       //Hotloader
       {

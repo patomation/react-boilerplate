@@ -7,9 +7,11 @@ import './main.scss'
 
 //Components
 import Layout from './components/layout/layout'
+import Svg from './components/svg/svg'
 
 //IMAGES
 import image from '../images/CHAT2.gif'
+import svg from '../images/logout.svg'
 
 var App = React.createClass({
   styles:{
@@ -33,6 +35,22 @@ var App = React.createClass({
           Hello World
           <br/>
           <img src={image} />
+
+          <Svg
+            style={{
+              width: '30%',
+              fill: 'gold',
+            }}
+            src={svg} />
+
+          <img
+            style={{
+              width: '30%',
+              fill: 'red',
+            }}
+            src={svg} />
+
+
 
         </Layout>
       </div>

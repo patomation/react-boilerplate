@@ -23,6 +23,8 @@
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "sass-loader": "~2.0.1",
-    "style-loader": "~0.12.3"
+    "style-loader": "~0.12.3",
+    "svgo": "^0.6.0",
+    "svgo-loader": "^1.1.0"
   }
 }
