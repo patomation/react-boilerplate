@@ -23,18 +23,22 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: ["babel-loader"],
+          test: /\.js?$/,         // Match both .js and .jsx files
+          exclude: /node_modules/,
+          loader: "babel-loader",
+          query:
+            {
+              presets:['es2015','react']
+            }
       },
       {
         test: /\.html$/,
-        loader: "file?name=[name].[ext]",
+        loader: "file-loader?name=[name].[ext]",
       },
       // SASS
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: 'style-loader!css-loader!sass-loader'
       },
 
       //Image Loader
@@ -53,7 +57,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ["react-hot", "babel-loader"],
+        loaders: ["react-hot-loader", "babel-loader"],
       },
     ],
   }

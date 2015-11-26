@@ -1,6 +1,10 @@
+//Modules
 import React from "react";
+
+//Components
 import Header from './header'
 import Footer from './footer'
+import LoaderAnimation from './loader'
 
 var Layout = React.createClass({
   Props:{
@@ -50,6 +54,8 @@ var Layout = React.createClass({
       <div
         className='layout'
         style={this.merge(this.styles.layout,this.props.style)}>
+
+        <LoaderAnimation />
 
         <Header
           style={this.merge(this.styles.header,this.props.headerStyle)} >

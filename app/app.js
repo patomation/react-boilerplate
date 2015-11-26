@@ -14,21 +14,11 @@ import image from '../images/CHAT2.gif'
 import svg from '../images/logout.svg'
 
 var App = React.createClass({
-  styles:{
-    layout:{},
-    header:{},
-    content:{},
-    footer:{},
-  },
 
   render: function() {
     return(
       <div className='app'>
         <Layout
-          style={{}}
-          headerStyle={this.styles.header}
-          contentStyle={this.styles.content}
-          footerStyle={this.styles.footer}
           headerContent={'header content'}
           footerContent={'footer content'}>
 
@@ -36,19 +26,9 @@ var App = React.createClass({
           <br/>
           <img src={image} />
 
-          <Svg
-            style={{
-              width: '30%',
-              fill: 'gold',
-            }}
-            src={svg} />
+          <Svg src={svg} />
 
-          <img
-            style={{
-              width: '30%',
-              fill: 'red',
-            }}
-            src={svg} />
+          <img src={svg} />
 
 
 
