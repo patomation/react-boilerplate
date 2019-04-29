@@ -1,66 +1,29 @@
-var svgoConfig = JSON.stringify({
-  plugins: [
-    {removeTitle: true},
-    {convertColors: {shorthex: false}},
-    {convertPathData: false}
-  ]
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+const htmlPlugin = new HtmlWebPackPlugin({
+  template: "./src/index.html",
+  filename: "./index.html"
 });
 
 module.exports = {
-  context: __dirname + "/app",
-  entry: {
-    javascript: "./app.js",
-    html: "./index.html"
-  },
-
-
-  output: {
-    filename: "app.js",
-    path: __dirname + "/dist"
-  },
-
-
   module: {
-    loaders: [
-      {
-          test: /\.js?$/,         // Match both .js and .jsx files
-          exclude: /node_modules/,
-          loader: "babel-loader",
-          query:
-            {
-              presets:['es2015','react']
-            }
-      },
-      {
-        test: /\.html$/,
-        loader: "file-loader?name=[name].[ext]",
-      },
-      // SASS
-      {
-        test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
-      },
-
-      //Image Loader
-      { test: /\.jpe?g$|\.gif$|\.png$/i, loader: "file-loader" },
-
-      //SVG Loader
-      {
-        test: /.*\.svg$/,
-        loaders: [
-          'file-loader',
-          'svgo-loader?' + svgoConfig
-        ]
-      },
-
-      //Hotloader
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ["react-hot-loader", "babel-loader"],
+        use: {
+          loader: "babel-loader"
+        }
       },
-    ],
-  }
-
-
-}
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
+          "sass-loader" // compiles Sass to CSS, using Node Sass by default
+        ]
+      }
+    ]
+  },
+  plugins: [htmlPlugin]
+};
