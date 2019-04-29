@@ -1,7 +1,8 @@
 {
   "name": "react-webpack-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "USAGE:",
+  "private": true,
   "main": "webpack.config.js",
   "dependencies": {
     "react": "^16.8.6",
