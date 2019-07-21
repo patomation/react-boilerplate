@@ -1,22 +1,18 @@
 import React from 'react'
+import ReduxConsumerExample from './components/ReduxConsumerExample.js'
 
 export type AppProps = {
   message?: string
 }
 
-const App = ({ message }: AppProps): React.ReactElement => {
+export const App = (): React.ReactElement => {
   return (
-    <div className='app'>
-      <h1 style={{
-        color: 'gold',
-        position: 'relative',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        textAlign: 'center'
-      }}>
-        {message}
-      </h1>
+    <div className="app">
+      <header>
+        <h1>React + Redux + Router</h1>
+        <ReduxConsumerExample/>
+        <a href={'/about'}>ABOUT</a>
+      </header>
     </div>
   )
 }
-export default App
