@@ -1,46 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import PropTypes from 'prop-types';
 
-class ExampleContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      myvalue: false
-    };
+export default (props) => {
 
-    //A way to do make sure links work
-    this._handleClick = this._handleClick.bind(this)
+  const [myValue, setMyValue] = useState(false);
 
-  }
+  const { children, title } = props;
 
-  componentDidMount(){}
+  const childrenWithProps = React.Children.map( children, child =>
+    React.cloneElement(child, {
+      title: `${title} ${myValue}`
+     })
+  );
 
-  _handleClick(){
-    this.setState(prevState => ({
-      myvalue: !prevState.myvalue
-    }));
-  }
+  return(
+    <div
+      className="example-container"
+      onClick={()=>{
+        setMyValue(!myValue);
+      }}>
 
-  render(){
-    const childrenWithProps = React.Children.map(this.props.children, child =>
-      React.cloneElement(child, {
-        title: this.props.title + ' ' + this.state.myvalue
-       })
-    );
+      { childrenWithProps }
 
-    return(
-      <div
-        className="example-container"
-        onClick={this._handleClick.bind(this)}
-        >
-        { childrenWithProps }
-      </div>
-    )
-  }
+    </div>
+  )
 }
-
-ExampleContainer.propTypes = {
-  title: PropTypes.string
-}
-
-export default ExampleContainer;

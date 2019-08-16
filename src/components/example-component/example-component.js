@@ -1,27 +1,14 @@
 import React from "react";
-import PropTypes from 'prop-types';
 
-class ExampleComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+export default (props) => {
 
-  componentDidMount(){}
+  const { title } = props;
 
-  render(){
-
-    return(
-      <div
-        className="component-example">
-          {this.props.title}
-      </div>
-    )
-  }
+  return (
+    <div
+      className="component-example">
+        {title}
+    </div>
+  );
+  
 }
-
-ExampleComponent.propTypes = {
-  title: PropTypes.string
-}
-
-export default ExampleComponent;
