@@ -7,11 +7,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-react", "@babel/preset-env"]
+          }
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           "style-loader", // creates style nodes from JS strings
           "css-loader", // translates CSS into CommonJS
@@ -27,6 +30,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
+      }
     ]
   },
   plugins: [
