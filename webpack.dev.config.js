@@ -9,6 +9,7 @@ module.exports = merge(defaultConfig, {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     inline: true,
-    port: 3000
+    port: 3000,
+    historyApiFallback: true
   }
 })
