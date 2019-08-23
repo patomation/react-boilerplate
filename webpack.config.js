@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
 
 module.exports = {
   devServer: {
@@ -39,6 +40,12 @@ module.exports = {
         loader: 'url-loader?limit=100000'
       }
     ]
+  },
+  resolve: {
+    alias: {
+      //Use ONE local version of react when linking to other libraries. Use this react.
+      react: path.resolve('./node_modules/react')
+    }
   },
   plugins: [
     new HtmlWebPackPlugin({
