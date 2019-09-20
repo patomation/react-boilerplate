@@ -27,17 +27,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|mp3)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {},
-          },
-        ],
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=100000'
+          test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.woff2$|\.ttf$|\.wav$|\.mp3$/,
+          loader: 'file-loader?name=[name].[ext]'  //Keeps original file name
       }
     ]
   },
