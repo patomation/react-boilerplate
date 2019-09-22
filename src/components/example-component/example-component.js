@@ -1,14 +1,19 @@
-import React from "react";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export default (props) => {
-
-  const { title } = props;
-
+const ExampleComponent = ({
+  title
+}) => {
   return (
     <div
       className="component-example">
-        {title}
+      {title}
     </div>
-  );
-  
+  )
 }
+
+ExampleComponent.propTypes = {
+  title: PropTypes.string
+}
+
+export default ExampleComponent

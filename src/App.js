@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import ExampleContainer from "./containers/example-container/example-container.js";
-import ExampleComponent from "./components/example-component/example-component.js";
+import ExampleContainer from './containers/example-container/example-container.js'
+import ExampleComponent from './components/example-component/example-component.js'
 
 const App = () => {
   return (
@@ -11,6 +11,6 @@ const App = () => {
         <ExampleComponent />
       </ExampleContainer>
     </div>
-  );
+  )
 }
-export default App;
+export default App
