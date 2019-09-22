@@ -58,7 +58,6 @@ const setup = async () => {
     deleteFolderRecursive('.git')
     deleteFolderRecursive('./src/components')
     deleteFolderRecursive('./src/containers')
-    deleteFolderRecursive('./src/images')
 
     //Make empty components and containers folders
     fs.mkdirSync('./src/components')
