@@ -2,7 +2,11 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
+  entry: './src/index.js',
+  devtool: 'inline-source-map',
   devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
     inline: true,
     port: 3000
   },
@@ -35,7 +39,7 @@ module.exports = {
   resolve: {
     alias: {
       // Use ONE local version of react when linking to other libraries. Use this react.
-      react: path.resolve('./node_modules/react')
+      react: path.resolve(__dirname, 'node_modules', 'react')
     }
   },
   plugins: [
@@ -45,5 +49,9 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
     })
-  ]
+  ],
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  }
 }
