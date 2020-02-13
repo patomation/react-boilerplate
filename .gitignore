@@ -4,3 +4,4 @@ npm-debug.log
 /dist/
 yarn.lock
 yarn-error.log
+coverage
