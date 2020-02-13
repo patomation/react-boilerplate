@@ -36,36 +36,15 @@ const deleteFolderRecursive = (path) => {
   }
 }
 
-const appTemplate =
-`import React from 'react'
-
-const App = () => {
-  return (
-    <div className='app'>
-      React App
-    </div>
-  )
-}
-export default App
-`
-
 const setup = async () => {
   color.set()
   console.log('REACT BOILERPALTE SETUP SCRIPT')
   try {
     // Purge demo stuff
     deleteFolderRecursive('.git')
-    deleteFolderRecursive('./src/components')
-    deleteFolderRecursive('./src/containers')
 
     // Make empty components and containers folders
     fs.mkdirSync('./src/components')
-    fs.mkdirSync('./src/containers')
-
-    // Overwrite App.js
-    fs.writeFileSync('./src/App.js', appTemplate, (err, res) => {
-      console.log(err, res)
-    })
 
     // Purge setup script from package.json
     const npmPackage = require('./package.json')
