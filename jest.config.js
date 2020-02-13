@@ -9,6 +9,8 @@ module.exports = {
     'js',
     'json',
     'jsx',
+    'ts',
+    'tsx',
     'node'
   ],
   moduleNameMapper: {
@@ -23,5 +25,8 @@ module.exports = {
   testPathIgnorePatterns: [
     '\\\\node_modules\\\\'
   ],
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.js?$'
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest'
+  }
 }

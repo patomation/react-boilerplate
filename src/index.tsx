@@ -1,10 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-dom'
 
 import './sass/main.scss'
 import './images/icons/favicon.ico'
 
-import App from './App.js'
+import App from './App'
 
 if (module && module.hot) {
   module.hot.accept()

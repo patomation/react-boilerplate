@@ -2,7 +2,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -12,6 +12,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -34,6 +38,7 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
     alias: {
       // Use ONE local version of react when linking to other libraries. Use this react.
       react: path.resolve(__dirname, 'node_modules', 'react')
