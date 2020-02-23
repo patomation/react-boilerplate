@@ -20,7 +20,7 @@ module.exports = {
   roots: [
     '<rootDir>/src'
   ],
-  setupFiles: ['./setupTests.js'],
+  setupFiles: ['./jest.setup.js'],
   testEnvironment: 'node',
   testPathIgnorePatterns: [
     '\\\\node_modules\\\\'
