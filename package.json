@@ -1,16 +1,15 @@
 {
-  "name": "react-webpack-boilerplate",
-  "version": "0.4.0",
-  "description": "USAGE:",
+  "name": "@patomation/create-react-app",
+  "version": "1.0.0",
+  "description": "A simple react app template that is already ejected with webpack and no crap",
   "private": true,
-  "main": "webpack.config.js",
+  "main": "./scripts/create-react-app.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "./node_modules/.bin/eslint **/*.{js,ts,tsx}",
     "test": "jest",
-    "coverage": "jest --coverage",
-    "setup": "node setup.js"
+    "coverage": "jest --coverage"
   },
   "husky": {
     "hooks": {
