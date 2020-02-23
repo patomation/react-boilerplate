@@ -1,15 +1,16 @@
 {
   "name": "@patomation/create-react-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple react app template that is already ejected with webpack and no crap",
-  "private": true,
+  "private": false,
   "main": "./scripts/create-react-app.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "./node_modules/.bin/eslint **/*.{js,ts,tsx}",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "create-react-app": "node ./scripts/create-react-app.js"
   },
   "husky": {
     "hooks": {

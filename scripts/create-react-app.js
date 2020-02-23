@@ -111,7 +111,10 @@ const createReactApp = async () => {
           // Set project name as package name
           const packageData = JSON.parse(fs.readFileSync(sourceElementPath))
           packageData.name = projectName
-          packageData.main = 'webpack.config.js'
+          delete packageData.main
+          delete packageData.scripts['create-react-app']
+          packageData.private = true
+          packageData.version = '0.0.0'
           fs.writeFileSync(destinationElementPath, JSON.stringify(packageData, null, 2), 'utf8')
         } else if (element === 'webpack.config.js') {
           // Set project name as title
