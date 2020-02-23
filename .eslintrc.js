@@ -42,5 +42,8 @@ module.exports = {
     es6: true,
     node: true,
     jest: true
+  },
+  rules: {
+    '@typescript-eslint/member-delimiter-style': 0
   }
 }
