@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   verbose: true,
   clearMocks: true,
@@ -18,7 +20,7 @@ module.exports = {
     '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.js'
   },
   roots: [
-    '<rootDir>/src'
+    path.resolve('src')
   ],
   setupFiles: ['./jest.setup.js'],
   testEnvironment: 'node',
