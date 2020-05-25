@@ -14,7 +14,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect"
+      version: 'detect'
     }
   },
   overrides: [
@@ -29,7 +29,7 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 0,
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/no-empty-function': 0
-      },
+      }
     }
   ],
   plugins: [
