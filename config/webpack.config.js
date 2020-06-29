@@ -41,7 +41,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
       // Use ONE local version of react when linking to other libraries. Use this react.
-      react: path.resolve(__dirname, 'node_modules', 'react')
+      // react: path.resolve(__dirname, 'node_modules', 'react')
     }
   },
   plugins: [
