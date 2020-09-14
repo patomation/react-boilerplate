@@ -1,14 +1,16 @@
 {
-    "compilerOptions": {
-        "target": "es6", 
-        "module": "commonjs",
-        "jsx": "react",
-        "strict": false,
-        "noImplicitAny": false,
-        "declaration": false,
-        "outDir": "dist",
-        "sourceMap": true,
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
+  "extends": "tsconfigs/browser-executable",
+  "compilerOptions": {
+    "target": "es6", 
+    "module": "commonjs",
+    "jsx": "react",
+    "strict": false,
+    "noImplicitAny": false,
+    "declaration": false,
+    "outDir": "dist",
+    "sourceMap": true,
+    "types": ["jest"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
