@@ -1,5 +1,5 @@
 import React from 'react'
-import ReduxConsumerExample from './components/ReduxConsumerExample.js'
+import ReduxConsumerExample from './components/ReduxConsumerExample'
 
 export type AppProps = {
   message?: string
