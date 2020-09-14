@@ -44,6 +44,8 @@ module.exports = {
     jest: true
   },
   rules: {
-    '@typescript-eslint/member-delimiter-style': 0
+    '@typescript-eslint/member-delimiter-style': 0,
+    '@typescript-eslint/no-use-before-define': 0, // fixes: 'React' was used before it was defined
+    'no-use-before-define': 0 // fixes: 'React' was used before it was defined
   }
 }
