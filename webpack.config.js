@@ -3,13 +3,7 @@ const path = require('path')
 
 module.exports = {
   entry: './src/index.tsx',
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    inline: true,
-    port: 3000
-  },
+
   module: {
     rules: [
       {

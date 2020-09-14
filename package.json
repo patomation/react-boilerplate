@@ -5,8 +5,8 @@
   "private": false,
   "main": "./scripts/create-react-app.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot --config ./webpack.config.js",
-    "build": "webpack --mode production --config ./webpack.config.js",
+    "start": "webpack-dev-server --mode development --open --hot --config ./webpack.dev.config.js",
+    "build": "webpack --mode production --config ./webpack.prod.config.js",
     "lint": "./node_modules/.bin/eslint **/*.{js,ts,tsx}",
     "test": "jest",
     "coverage": "npm run test -- --coverage",
@@ -60,7 +60,8 @@
     "url-loader": "4.1.0",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0"
+    "webpack-dev-server": "3.11.0",
+    "webpack-merge": "5.1.4"
   },
   "repository": {
     "type": "git",
