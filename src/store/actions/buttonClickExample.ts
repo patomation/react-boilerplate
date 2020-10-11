@@ -1,10 +1,8 @@
-import { Dispatch } from 'redux'
+import { AnyAction } from 'redux'
 
-export function buttonClickExample (value: string) {
-  return (dispatch: Dispatch): void => {
-    dispatch({
-      type: 'EXAMPLE',
-      value: 'New Value of what ever: ' + value
-    })
-  }
-}
+export const BUTTON_CLICK_EXAMPLE = 'BUTTON_CLICK_EXAMPLE'
+
+export const buttonClickExample = (value: string): AnyAction => ({
+  type: BUTTON_CLICK_EXAMPLE,
+  payload: 'New Value of what ever: ' + value
+})

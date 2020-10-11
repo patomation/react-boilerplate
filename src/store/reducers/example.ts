@@ -1,16 +1,12 @@
+import { AnyAction } from 'redux'
+import { BUTTON_CLICK_EXAMPLE } from '../actions'
 
 const example = (
   state = 'initial value',
-  action: {
-    type: string,
-    value: string
-  }
+  action: AnyAction
 ): unknown => {
-  return (action.type === 'EXAMPLE' ? action.value : state)
+  const { type, payload } = action
+
+  return (type === BUTTON_CLICK_EXAMPLE ? payload : state)
 }
 export default example
-
-// "example" is our global state
-//  we can access it with "connect()".
-// Set new value like so
-// dispatch({type: 'EXAMPLE', value: 'new value'})
