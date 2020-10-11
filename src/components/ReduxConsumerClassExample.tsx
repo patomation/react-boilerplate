@@ -3,7 +3,7 @@ import { ReactReduxContext, connect } from 'react-redux'
 
 import {
   buttonClickExample
-} from '../actions'
+} from '../store/actions'
 
 // Connect redux state to props
 export default connect((state) => {

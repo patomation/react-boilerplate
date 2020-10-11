@@ -7,6 +7,7 @@
     "scope-enum": [2, "always", [
       "deps",
       "entry",
+      "store",
       "typescript",
       "webpack",
       "react"

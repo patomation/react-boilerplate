@@ -7,7 +7,7 @@ import './images/icons/favicon.ico'
 
 import { App } from './App'
 
-import configureStore from './configureStore'
+import configureStore from './store/configureStore'
 
 if (module && module.hot) {
   module.hot.accept()
