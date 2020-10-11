@@ -10,7 +10,8 @@
       "store",
       "typescript",
       "webpack",
-      "react"
+      "react",
+      "redux"
     ]]
   }
 }

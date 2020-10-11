@@ -1,5 +1,5 @@
 import React from 'react'
-import ReduxConsumerExample from './components/ReduxConsumerExample'
+import { Button } from './components/ReduxHooksExample'
 
 export type AppProps = {
   message?: string
@@ -10,7 +10,7 @@ export const App = (): React.ReactElement => {
     <div className="app">
       <header>
         <h1>React + Redux + Router</h1>
-        <ReduxConsumerExample/>
+        <Button/>
         <a href={'/about'}>ABOUT</a>
       </header>
     </div>
