@@ -2,10 +2,23 @@
   "extends": "tsconfigs/nodejs-executable",
   "compilerOptions": {
     "outDir": "../../build/server",
-    "composite": true
+    "composite": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    // "rootDir": "./src",
+    "removeComments": true,
+    "strict": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
   "include": [
     "**/*.ts",
     "../types/*.ts"
-  ]
+  ],
+  "exclude": ["node_modules"],
 }

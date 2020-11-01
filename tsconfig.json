@@ -9,7 +9,8 @@
     "declaration": false,
     "outDir": "dist",
     "sourceMap": true,
-    "types": ["jest"]
+    "types": ["jest"],
+    "experimentalDecorators": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
