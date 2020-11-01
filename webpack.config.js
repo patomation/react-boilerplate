@@ -2,7 +2,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: './src/client/index.tsx',
 
   module: {
     rules: [
@@ -42,7 +42,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       hash: true,
       title: 'React Boilerplate',
-      template: './src/index.html',
+      template: './src/client/index.html',
       filename: './index.html'
     })
   ],
