@@ -1,0 +1,11 @@
+{
+  "extends": "tsconfigs/nodejs-executable",
+  "compilerOptions": {
+    "outDir": "../../build/server",
+    "composite": true
+  },
+  "include": [
+    "**/*.ts",
+    "../types/*.ts"
+  ]
+}

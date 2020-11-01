@@ -1,0 +1,18 @@
+export const displayTitle = (): void => {
+  console.log('                      SERVER           ')
+  console.log('                                       ')
+  console.log('                        /\\            ')
+  console.log('                       /  \\           ')
+  console.log('                      /    \\          ')
+  console.log('                     /      \\         ')
+  console.log('                    /        \\        ')
+  console.log('                   /          \\       ')
+  console.log('                  /   < () >   \\      ')
+  console.log('                 /    < () >    \\     ')
+  console.log('                /     < () >     \\    ')
+  console.log('               /                  \\   ')
+  console.log('              /        }--{        \\  ')
+  console.log('             /______________________\\ ')
+  console.log('                                       ')
+  console.log('                                       ')
+}

@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-export type AppProps = {
-  message?: string
+export type Props = {
+  title?: string
 }
 
-const App = ({ message }: AppProps): React.ReactElement => {
+const App = ({ title }: Props): React.ReactElement => {
+  const [message, setMessage] = useState<string>('')
+
+  const fetchMessage = async (): Promise<void> => {
+    const response = await fetch('http://localhost:3050/')
+    const { data } = await response.json()
+    setMessage(data.message)
+  }
+
+  useEffect((): void => {
+    fetchMessage()
+  }, [])
+
   return (
     <div className='app'>
-      <h1 style={{
+      <div style={{
         color: 'gold',
         position: 'relative',
         top: '50%',
         transform: 'translateY(-50%)',
         textAlign: 'center'
       }}>
-        {message}
-      </h1>
+        <h1>{title}</h1>
+        <p>{!message ? 'requesting message from server' : `message from server: "${message}"`}</p>
+      </div>
     </div>
   )
 }

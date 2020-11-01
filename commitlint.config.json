@@ -11,7 +11,8 @@
       "server",
       "typescript",
       "webpack",
-      "react"
+      "react",
+      "server"
     ]]
   }
 }

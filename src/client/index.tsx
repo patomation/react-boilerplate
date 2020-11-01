@@ -11,6 +11,6 @@ if (module && module.hot) {
 }
 
 render(
-  <App message={'< ReactBoilerplate />'} />,
+  <App title={'< ReactBoilerplate />'} />,
   document.getElementById('root')
 )
