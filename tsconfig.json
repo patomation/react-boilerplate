@@ -1,7 +1,7 @@
 {
   "extends": "tsconfigs/browser-executable",
   "compilerOptions": {
-    "target": "es6", 
+    "target": "es6",
     "module": "commonjs",
     "jsx": "react",
     "strict": false,
@@ -9,7 +9,8 @@
     "declaration": false,
     "outDir": "dist",
     "sourceMap": true,
-    "types": ["jest"]
+    "types": ["jest", "node"],
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
