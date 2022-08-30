@@ -1,22 +1,36 @@
-USAGE:
+# React Boilerplate
 
-Run Server With hot module reloading.
+keep it simple stupid
+
+## USAGE:
+
+Install the deps the first time
+
+```sh
+npm i
 ```
-webpack-dev-server --hot --inline
-```
-or
-```
+
+Run the Dev Server
+
+```sh
 npm start
 ```
 
-Package files
-```
-webpack
+## Build:
+
+```sh
+npm run build
 ```
 
-Save NPM Dependencies
+## Testing
+
+```sh
+npm test
 ```
-npm shrinkwrap
+
+## Docker
+
+```sh
+docker build -t react-boilerplate-image .
+docker run -dit --rm --name react-boilerplate-app -p 8080:80 react-boilerplate-image
 ```
-creates npm-shrinkwrap.json file.
-https://docs.npmjs.com/cli/shrinkwrap
