@@ -5,7 +5,7 @@
     "scope-enum": [
       2,
       "always",
-      ["deps", "docker", "netlify", "typescript", "webpack", "react"]
+      ["deps", "docker", "github", "netlify", "typescript", "webpack", "react"]
     ]
   }
 }
