@@ -1,0 +1,14 @@
+name: Changed Since Test
+run-name: ${{ github.actor }} is running
+on: [pull_request]
+jobs:
+  Changed-Since-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        # run: git fetch --prune
+      - run: npm i
+      - run: npm test -- --changedSince=origin/${{ github.event.pull_request.base.ref }} --passWithNoTests
