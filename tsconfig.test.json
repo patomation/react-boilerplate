@@ -1,0 +1,7 @@
+{
+  "extends": "tsconfigs/nodejs-executable",
+  "compilerOptions": {
+    "outDir": "build"
+  },
+  "include": ["src/**/*.test.ts"]
+}

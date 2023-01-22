@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "@commitlint/config-conventional"
+  ],
+  "rules": {
+    "scope-enum": [
+      2,
+      "always",
+      [
+        "bin",
+        "deps",
+        "dev",
+        "doc",
+        "docker",
+        "github",
+        "index",
+        "netlify",
+        "package",
+        "react",
+        "test",
+        "typescript",
+        "update",
+        "webpack"
+      ]
+    ]
+  }
+}

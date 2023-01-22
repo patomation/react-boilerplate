@@ -6,3 +6,10 @@ yarn.lock
 yarn-error.log
 coverage
 .husky/_
+.nyc_output
+coverage
+dist
+build
+*\ copy*
+*~
+*.tgz
