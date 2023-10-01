@@ -13,3 +13,4 @@ build
 *\ copy*
 *~
 *.tgz
+.env

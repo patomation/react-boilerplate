@@ -4,3 +4,7 @@ lib
 build
 *\ copy*
 .commitlintrc.json
+.env.example
+.gitignore
+.husky
+.prettierignore
