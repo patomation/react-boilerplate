@@ -5,13 +5,16 @@
 }
 
 body {
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica Neue,
+    Helvetica,
+    sans-serif;
   background: #333;
 }
 
 html,
 body,
-#root,
-.app {
+#root {
   height: 100%;
 }

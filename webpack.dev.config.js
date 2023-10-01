@@ -9,5 +9,9 @@ module.exports = merge(defaultConfig, {
   devServer: {
     compress: true,
     port: process.env.PORT,
+    historyApiFallback: true,
+  },
+  output: {
+    publicPath: '/',
   },
 })
