@@ -8,3 +8,5 @@ build
 .gitignore
 .husky
 .prettierignore
+Dockerfile
+nginx.conf
