@@ -7,6 +7,7 @@
       2,
       "always",
       [
+        "app",
         "bin",
         "deps",
         "dev",
