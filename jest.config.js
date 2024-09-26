@@ -1,6 +1,6 @@
 //@ts-check
 const path = require('path')
-const fetch = require('node-fetch')
+// const fetch = require('node-fetch')
 
 module.exports = {
   verbose: true,
@@ -33,5 +33,5 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   // ReferenceError: fetch is not defined https://github.com/mswjs/msw/issues/686
-  globals: { fetch },
+  // globals: { fetch },
 }
